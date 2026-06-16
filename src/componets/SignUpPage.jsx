@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import GPTAd from "./GPTAd";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -25,7 +26,7 @@ export default function SignUpPage() {
 
     const [errors, setErrors] = useState({});
 
-   const handleChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
 
         setFormData((prev) => ({
@@ -183,6 +184,7 @@ export default function SignUpPage() {
                     </Box>
                 </Paper>
             </Box>
+            <GPTAd />
         </Container>
     );
 }

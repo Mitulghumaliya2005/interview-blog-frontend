@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import GPTAd from "../componets/GPTAd";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -80,7 +81,12 @@ const UserBlog = () => {
                         </Card>
                     </Grid>
                 ))}
+
             </Grid>
+            <Grid sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <GPTAd />
+            </Grid>
+
         </Container>
     );
 };
