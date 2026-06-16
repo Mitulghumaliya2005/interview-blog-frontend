@@ -10,6 +10,7 @@ import {
     Paper,
 } from "@mui/material";
 import axios from "axios";
+import GoogleAd from "./GoogleAd";
 import { useNavigate } from "react-router-dom";
 
 const apiUrl = import.meta.env.VITE_API_URL;
@@ -89,6 +90,7 @@ export default function SignUpPage() {
 
     return (
         <Container component="main" maxWidth="xs">
+            <GoogleAd adSlot="9695308608" />
             <Box
                 sx={{
                     marginTop: 8,

@@ -91,7 +91,7 @@ export default function LoginPage() {
 
     return (
         <Container component="main" maxWidth="xs">
-            <GoogleAd />
+            <GoogleAd adSlot="9695308608" />
             <Box
                 sx={{
                     marginTop: 8,

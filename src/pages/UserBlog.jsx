@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import GoogleAd from "../componets/GoogleAd";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -53,9 +54,10 @@ const UserBlog = () => {
             >
                 Blogs
             </Typography>
+            <GoogleAd adSlot="8857998956" style={{ margin: '18px auto', display: 'block' }} />
 
             <Grid container spacing={3}>
-                {blogs.map((blog) => (
+                {blogs.map((blog, index) => (
                     <Grid item xs={12} md={6} lg={4} key={blog._id}>
                         <Card
                             sx={{
