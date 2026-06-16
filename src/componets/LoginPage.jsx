@@ -91,7 +91,7 @@ export default function LoginPage() {
 
     return (
         <Container component="main" maxWidth="xs">
-            <GoogleAd adSlot="9695308608" />
+            <GoogleAd />
             <Box
                 sx={{
                     marginTop: 8,
@@ -150,19 +150,6 @@ export default function LoginPage() {
                             onChange={handleChange}
                             error={Boolean(errors.password)}
                             helperText={errors.password}
-
-
-
-
-
-
-
-
-
-
-
-
-
                         />
 
                         <Button
@@ -174,7 +161,7 @@ export default function LoginPage() {
                             Sign In
                         </Button>
                         <Grid container>
-                            <Grid item>
+                            <Grid>
                                 <Link href="/signup" variant="body2" underline="hover">
                                     {"Sign Up"}
                                 </Link>

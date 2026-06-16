@@ -1,35 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-function GoogleAd({
-    adClient = "ca-pub-3008502799447840",
-    adSlot,
-    adFormat = "auto",
-    fullWidthResponsive = true,
-    style = { display: "block", margin: "20px auto" },
-}) {
-    useEffect(() => {
-        if (!adSlot) {
-            console.warn("GoogleAd: adSlot prop is required.");
-            return;
-        }
+export default function GoogleAd() {
+  const loaded = useRef(false);
 
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (err) {
-            console.log(err);
-        }
-    }, [adSlot]);
+  useEffect(() => {
+    if (loaded.current) return;
+    loaded.current = true;
 
-    return (
-        <ins
-            className="adsbygoogle"
-            style={style}
-            data-ad-client={adClient}
-            data-ad-slot={adSlot}
-            data-ad-format={adFormat}
-            data-full-width-responsive={fullWidthResponsive ? "true" : "false"}
-        />
-    );
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.log("Ad error:", err);
+    }
+  }, []);
+
+  return (
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3940256099942544"
+      data-ad-slot="6300978111"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  );
 }
-
-export default GoogleAd;
