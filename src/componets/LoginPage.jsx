@@ -15,6 +15,7 @@ import {
     InputAdornment
 } from '@mui/material';
 import axios from 'axios';
+import GoogleAd from './GoogleAd';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -90,6 +91,7 @@ export default function LoginPage() {
 
     return (
         <Container component="main" maxWidth="xs">
+            <GoogleAd />
             <Box
                 sx={{
                     marginTop: 8,
@@ -140,7 +142,7 @@ export default function LoginPage() {
                             fullWidth
                             name="password"
                             label="Password"
-            
+
                             type='password'
                             id="password"
                             autoComplete="current-password"
@@ -148,19 +150,19 @@ export default function LoginPage() {
                             onChange={handleChange}
                             error={Boolean(errors.password)}
                             helperText={errors.password}
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
                         />
 
                         <Button
