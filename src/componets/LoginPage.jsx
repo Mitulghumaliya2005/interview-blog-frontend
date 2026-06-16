@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import GoogleAd from './GoogleAd';
+import GPTAd from './GPTAd';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -91,7 +92,7 @@ export default function LoginPage() {
 
     return (
         <Container component="main" maxWidth="xs">
-            <GoogleAd />
+            {/* <GoogleAd /> */}
             <Box
                 sx={{
                     marginTop: 8,
@@ -170,6 +171,7 @@ export default function LoginPage() {
                     </Box>
                 </Paper>
             </Box>
+            <GPTAd />
         </Container>
     );
 }
